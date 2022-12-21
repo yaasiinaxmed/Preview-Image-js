@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+   /* max-width: 330px; */
+   width: 320px;
+   background: white;
+   padding: 18px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   gap: 8px;
+}
+
+.container .image-box {
+    width: 100%;
+    height: 200px;
+    background: #cccccc1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .image-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.container .image-box .icon {
+    font-size: 80px;
+    color: #007fff;
+}
+
+.container .image-box h4 {
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    bottom: 20px;
+}
+
+.container .image-box p {
+    font-size: 13px;
+    position: relative;
+    bottom: 20px;
+}
+
+.container .image-box p span {
+    color: #007fff;
+    font-weight: 600;
+}
+
+.container #select-btn {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background: #007fff;
+    color: white;
+    border-radius: 4px;
+    box-shadow: inset 2px -2px rgba(0, 0, 0, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.container #select-btn .loader {
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background: #007fff;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    animation: loader 1s ease infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
